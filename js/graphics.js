@@ -27,6 +27,10 @@ class DarkThemeGraphics {
 	static labelColor = "white";
 	static labelHalo = [40, 40, 40, 1.0];
 
+	static buttonBackgroundColor = "#2a242073";
+
+	static htmlBodyColor = "lightgray";
+
 	// Route graphics
 	static orangePoint = {
 		geometry: {
@@ -210,7 +214,7 @@ class DarkThemeGraphics {
 		},
 		symbol: {
 			type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
-			url: "assets/img/tools/eraser.svg",
+			url: "assets/img/tools/eraser_dark.svg",
 			width: 20,
 			height: 18
 		}
@@ -231,6 +235,16 @@ class DarkThemeGraphics {
 			height: "200px"
 		}
 	};
+
+	static eraserImage = "assets/img/tools/eraser_dark.svg";
+
+	// Tools
+	static toolLineBlack = "assets/img/tools/line_white.svg";
+	static toolLineGray = "assets/img/tools/line_darkgray.svg";
+	static toolLineRed = "assets/img/tools/line_brightred.svg";
+	static toolPath = "assets/img/tools/path_dark.svg";
+	static toolPathNoLines = "assets/img/tools/path_nolines_dark.svg";
+	static toolDestination = "assets/img/tools/destination_dark.svg";
 
 	//Graticule indicator numbers
 	static degreeSideLabel = {
@@ -295,6 +309,8 @@ class DarkThemeGraphics {
 			yoffset: 0,
 		}
 	};
+
+	static compassImage = "assets/img/downscaled_compass_dark.png";
 }
 
 class LightThemeGraphics {
@@ -322,6 +338,10 @@ class LightThemeGraphics {
 
 	static labelColor = "black";
 	static labelHalo = [221, 218, 215, 1.0];
+
+	static buttonBackgroundColor = "#ffd8c273";
+
+	static htmlBodyColor = "black";
 
 	// Route graphics
 	static orangePoint = {
@@ -528,6 +548,16 @@ class LightThemeGraphics {
 		}
 	};
 
+	static eraserImage = "assets/img/tools/eraser.svg";
+
+	// Tools
+	static toolLineBlack = "assets/img/tools/line_black.svg";
+	static toolLineGray = "assets/img/tools/line_gray.svg";
+	static toolLineRed = "assets/img/tools/line_red.svg";
+	static toolPath = "assets/img/tools/path.svg";
+	static toolPathNoLines = "assets/img/tools/path_nolines.svg";
+	static toolDestination = "assets/img/tools/destination.svg";
+
 	//Graticule indicator numbers
 	static degreeSideLabel = {
 		geometry: {
@@ -591,6 +621,8 @@ class LightThemeGraphics {
 			yoffset: 0,
 		}
 	};
+
+	static compassImage = "assets/img/downscaled_compass.png";
 }
 
 let _currentThemeColor = LightThemeGraphics;
@@ -624,37 +656,38 @@ class GraphicsLibrary {
 		return _currentThemeColor.aestrinWindArrowColor;
 	}
 
-	static get alankhWindColor(){
+	static get alankhWindColor() {
 		return _currentThemeColor.alankhWindColor;
 	}
 
-	static get alankhWindArrowColor(){
+	static get alankhWindArrowColor() {
 		return _currentThemeColor.alankhWindArrowColor;
 	}
 
-	static get routeDownwindColor(){
+	static get routeDownwindColor() {
 		return _currentThemeColor.routeDownwindColor;
 	}
 
-	static get routeClosehauledColor(){
+	static get routeClosehauledColor() {
 		return _currentThemeColor.routeClosehauledColor;
 	}
 
-	static get routeBeamreach(){
+	static get routeBeamreach() {
 		return _currentThemeColor.routeBeamreach;
 	}
 
-	static get bigLabelColor(){
+	static get bigLabelColor() {
 		return _currentThemeColor.bigLabelColor;
 	}
-	static get bigLabelHalo(){
+	static get bigLabelHalo() {
 		return _currentThemeColor.bigLabelHalo;
 	}
 
-	static get labelColor(){
+	static get labelColor() {
 		return _currentThemeColor.labelColor;
 	}
-	static get labelHalo(){
+
+	static get labelHalo() {
 		return _currentThemeColor.labelHalo;
 	}
 
@@ -728,17 +761,58 @@ class GraphicsLibrary {
 		return _currentThemeColor.boat;
 	}
 
+	static get toolLineBlack() {
+		return _currentThemeColor.toolLineBlack;
+	}
+
+	static get toolLineGray() {
+		return _currentThemeColor.toolLineGray
+	}
+
+	static get toolLineRed() {
+		return _currentThemeColor.toolLineRed;
+	}
+
+	static get toolPath() {
+		return _currentThemeColor.toolPath;
+	}
+
+	static get toolPathNoLines() {
+		return _currentThemeColor.toolPathNoLines;
+	}
+
+	static get toolDestination() {
+		return _currentThemeColor.toolDestination;
+	}
+
+
+	static get eraserImage() {
+		return _currentThemeColor.eraserImage;
+	}
+
 	//Graticule indicator numbers
-	static get degreeSideLabel(){
+	static get degreeSideLabel() {
 		return _currentThemeColor.degreeSideLabel;
 	}
 
-	static get degreeTopLabel(){
+	static get degreeTopLabel() {
 		return _currentThemeColor.degreeTopLabel;
 	}
 
-	static get distanceLabel(){
+	static get distanceLabel() {
 		return _currentThemeColor.distanceLabel;
+	}
+
+	static get compassImage() {
+		return _currentThemeColor.compassImage;
+	}
+
+	static get buttonBackgroundColor() {
+		return _currentThemeColor.buttonBackgroundColor;
+	}
+
+	static get htmlBodyColor() {
+		return _currentThemeColor.htmlBodyColor;
 	}
 
 	//Line heading text

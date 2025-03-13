@@ -41,7 +41,7 @@ function setMode(event, newMode){
 
 	let buttons = document.getElementsByClassName("iconbutton");
 	for (let i = 0; i < buttons.length; i++) {
-		buttons[i].style.backgroundColor = dark_mode ? "#2a242073": "#ffd8c273";
+		buttons[i].style.backgroundColor = GraphicsLibrary.buttonBackgroundColor;
 	}
 
 	if(drawMode != DrawMode.None){
@@ -1339,20 +1339,20 @@ require([
 			buttons[i].classList.toggle("button-dark", darkMode);
 		}
 
-		document.body.style.color = darkMode ? "lightgray": "black";
-		document.getElementById("compass_image").src =  darkMode ? "assets/img/downscaled_compass_dark.png" :  "assets/img/downscaled_compass.png";
+		document.body.style.color = GraphicsLibrary.htmlBodyColor;
+		document.getElementById("compass_image").src =  GraphicsLibrary.compassImage;
 
 		//tools
-		document.getElementById("tool_line_black").src =  darkMode ? "assets/img/tools/line_white.svg" :  "assets/img/tools/line_black.svg";
-		document.getElementById("tool_line_gray").src =  darkMode ? "assets/img/tools/line_darkgray.svg" :  "assets/img/tools/line_gray.svg";
-		document.getElementById("tool_line_red").src =  darkMode ? "assets/img/tools/line_brightred.svg" :  "assets/img/tools/line_red.svg";
-		document.getElementById("tool_path").src =  darkMode ? "assets/img/tools/path_dark.svg" :  "assets/img/tools/path.svg";
-		document.getElementById("tool_path_nolines").src =  darkMode ? "assets/img/tools/path_nolines_dark.svg" :  "assets/img/tools/path_nolines.svg";
-		document.getElementById("tool_destination").src =  darkMode ? "assets/img/tools/destination_dark.svg" :  "assets/img/tools/destination.svg";
-		document.getElementById("tool_eraser").src =  darkMode ? "assets/img/tools/eraser_dark.svg" :  "assets/img/tools/eraser.svg";
+		document.getElementById("tool_line_black").src =  GraphicsLibrary.toolLineBlack;
+		document.getElementById("tool_line_gray").src =  GraphicsLibrary.toolLineGray;
+		document.getElementById("tool_line_red").src =  GraphicsLibrary.toolLineRed;
+		document.getElementById("tool_path").src =  GraphicsLibrary.toolPath;
+		document.getElementById("tool_path_nolines").src =  GraphicsLibrary.toolPathNoLines;
+		document.getElementById("tool_destination").src =  GraphicsLibrary.toolDestination;
+		document.getElementById("tool_eraser").src =  GraphicsLibrary.eraserImage;
 
 		for (let i = 0; i < buttons.length; i++) {
-			buttons[i].style.backgroundColor = dark_mode ? "#2a242073": "#ffd8c273";
+			buttons[i].style.backgroundColor = GraphicsLibrary.buttonBackgroundColor;
 		}
 
 		//annoying zoom menu that's controlled by arcgis internally
